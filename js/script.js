@@ -40,7 +40,7 @@ document.getElementById('withdraw-button').addEventListener('click', function(){
     const withdrawAmount = getDepositInput('withdraw-input');
 
     const balanceTotal = document.getElementById('balance-total').innerText;
-    if(withdrawAmount > 0 && parseFloat(balanceTotal) > withdrawAmount){
+    if(withdrawAmount > 0 && parseFloat(balanceTotal) >= withdrawAmount){
     updateTotalField('withdraw-total', withdrawAmount);
     updateBalance(withdrawAmount, false);
     }
